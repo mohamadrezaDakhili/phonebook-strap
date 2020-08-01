@@ -1,0 +1,7 @@
+#navVertical {
+  background-color: blue;
+  height: 100vh;
+  width: 5%;
+  display: none;
+  transition: all 5s;
+}
