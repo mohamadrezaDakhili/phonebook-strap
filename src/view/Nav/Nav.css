@@ -5,6 +5,7 @@
 }
 #imgMenu {
   transform: scaleX(-1);
+  width: 25px;
 }
 #imgMenu:hover {
   cursor: pointer;
@@ -12,7 +13,7 @@
 #navHorizontal {
   width: 100%;
   height: 100vh;
-  background-color: green;
   transition: 0.5s;
   border: 0px;
+  background-color: white;
 }

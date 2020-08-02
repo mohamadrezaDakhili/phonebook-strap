@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { Navbar, NavbarBrand, NavbarText, NavItem, Row } from "reactstrap";
+import { Navbar } from "reactstrap";
 import "./Nav.css";
 import imgUser from "../../img/user.jpg";
-import imgNotif from "../../img/notif.svg";
+// import imgNotif from "../../img/notif.svg";
 import imgMenu from "../../img/menu.svg";
+import { IoMdNotifications } from "react-icons/io";
 
 const NavBarPhoneBook = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,7 +16,6 @@ const NavBarPhoneBook = (props) => {
     let navHorizontal = document.getElementById("navHorizontal");
     let navVertical = document.getElementById("navVertical");
     toggle();
-    console.log(isOpen);
     if (isOpen === false) {
       navHorizontal.style.width = "95%";
       navVertical.style.display = "block";
@@ -33,7 +33,8 @@ const NavBarPhoneBook = (props) => {
       <Navbar>
         <div>
           <img className="imgUser" src={imgUser} alt="test" width="50px" />
-          <img className="mr-3" src={imgNotif} alt="notif" width="25px" />
+          {/* <img className="mr-3" src={imgNotif} alt="notif" width="25px" /> */}
+          <IoMdNotifications style={{ fontSize: "25px" }} className="mr-3" />
         </div>
         <div>
           <img

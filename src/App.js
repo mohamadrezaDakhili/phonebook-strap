@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { Container, Row } from "reactstrap";
+import { Row } from "reactstrap";
 import NavBarPhoneBook from "./view/Nav/Nav";
 import NavVertical from "./view/Nav/NavVertical/NavVertical";
 function App() {
