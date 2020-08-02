@@ -1,42 +1,36 @@
 import React, { useState } from "react";
-import { Navbar } from "reactstrap";
+import { Navbar, Row, Form, Label, Input, FormGroup } from "reactstrap";
 import "./Nav.css";
 import imgUser from "../../img/user.jpg";
-// import imgNotif from "../../img/notif.svg";
 import imgMenu from "../../img/menu.svg";
 import { IoMdNotifications } from "react-icons/io";
+import SearchView from "../Search/SearchView";
 
 const NavBarPhoneBook = (props) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const toggle = () => {
-    setIsOpen(!isOpen);
-  };
-
+  const mainRef = React.useRef(null);
   const btnNavHandler = () => {
-    let navHorizontal = document.getElementById("navHorizontal");
-    let navVertical = document.getElementById("navVertical");
-    toggle();
-    if (isOpen === false) {
-      navHorizontal.style.width = "95%";
-      navVertical.style.display = "block";
-      navHorizontal.style.borderTopLeftRadius = "25px";
-      navHorizontal.style.borderBottomLeftRadius = "25px";
+    props.toggle();
+    if (mainRef.current && props.isOpen === false) {
+      mainRef.current.style.flex = "1 0 calc(100% - 100px)";
+      mainRef.current.style.borderBottomLeftRadius = "25px";
+      mainRef.current.style.borderTopLeftRadius = "25px";
     } else {
-      navHorizontal.style.width = "100%";
-      navVertical.style.display = "none";
-      navHorizontal.style.borderRadius = "0";
+      mainRef.current.style.borderRadius = "0";
+      mainRef.current.style.flex = "1 0 calc(100%)";
     }
   };
 
   return (
-    <div id="navHorizontal">
+    <main id="navHorizontal" ref={mainRef}>
       <Navbar>
         <div>
-          <img className="imgUser" src={imgUser} alt="test" width="50px" />
-          {/* <img className="mr-3" src={imgNotif} alt="notif" width="25px" /> */}
+          <img className="imgUser" src={imgUser} alt="img user" width="50px" />
           <IoMdNotifications style={{ fontSize: "25px" }} className="mr-3" />
         </div>
-        <div>
+        <Row className="p-0 m-0">
+          <div className="ml-4">
+            <SearchView />
+          </div>
           <img
             onClick={btnNavHandler}
             id="imgMenu"
@@ -44,9 +38,9 @@ const NavBarPhoneBook = (props) => {
             alt="menu"
             width="25px"
           />
-        </div>
+        </Row>
       </Navbar>
-    </div>
+    </main>
   );
 };
 

@@ -11,9 +11,11 @@
   cursor: pointer;
 }
 #navHorizontal {
+  z-index: 0 !important;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   transition: 0.5s;
   border: 0px;
   background-color: white;
+  flex: 1 0 100%;
 }

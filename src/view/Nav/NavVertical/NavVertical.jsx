@@ -8,10 +8,13 @@ import { MdPermContactCalendar } from "react-icons/md";
 import { FiLogOut } from "react-icons/fi";
 import { BsPlusSquareFill } from "react-icons/bs";
 
-const NavVertical = () => {
+const NavVertical = (props) => {
   return (
-    <div id="navVertical">
-      <Row className="h-100 p-0 m-0">
+    <aside
+      id="navVertical"
+      style={{ overflow: `${!props.isOpen ? "hidden" : "visible"}` }}
+    >
+      <Row className={`${!props.isOpen ? "test" : ""} h-100 p-0 m-0`}>
         <div className="box-logo">
           <img src={logoPhoneBook} alt="logoPhoneBook" width="30px" />
         </div>
@@ -33,7 +36,7 @@ const NavVertical = () => {
           </Row>
         </div>
       </Row>
-    </div>
+    </aside>
   );
 };
 
