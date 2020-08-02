@@ -16,7 +16,12 @@ const NavVertical = (props) => {
     >
       <Row className={`${!props.isOpen ? "test" : ""} h-100 p-0 m-0`}>
         <div className="box-logo">
-          <img src={logoPhoneBook} alt="logoPhoneBook" width="30px" />
+          <img
+            style={{ transition: "0.5s" }}
+            src={logoPhoneBook}
+            alt="logoPhoneBook"
+            width="30px"
+          />
         </div>
         <div className="box-item">
           <Row className="layoutItem mt-5 justify-content-center align-items-center">

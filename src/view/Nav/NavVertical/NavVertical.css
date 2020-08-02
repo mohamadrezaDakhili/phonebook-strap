@@ -25,7 +25,7 @@
   height: 60px;
   border-radius: 10px;
   border: 0;
-  transition: 1s;
+  transition: 0.5s;
 }
 .layoutItem:hover {
   background-color: white;
@@ -38,7 +38,7 @@
 .iconStyle {
   color: #e0d7f1;
   font-size: 25px;
-  transition: all 1s;
+  transition: 0.5s;
 }
 .test * {
   width: 0;
