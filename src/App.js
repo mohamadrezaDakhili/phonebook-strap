@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import "./App.css";
-import NavBarPhoneBook from "./view/Nav/Nav";
+import Main from "./view/Main";
 import NavVertical from "./view/Nav/NavVertical/NavVertical";
+import MainRouter from "./Router/MainRouter";
+
 function App() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -11,8 +13,9 @@ function App() {
 
   return (
     <div className="boxMain p-0 m-0">
-      <NavBarPhoneBook isOpen={isOpen} toggle={toggle} />
+      <Main isOpen={isOpen} toggle={toggle} />
       <NavVertical isOpen={isOpen} toggle={toggle} />
+      {/* <MainRouter /> */}
     </div>
   );
 }

@@ -17,7 +17,7 @@ const NavVertical = (props) => {
       <Row className={`${!props.isOpen ? "test" : ""} h-100 p-0 m-0`}>
         <div className="box-logo">
           <img
-            style={{ transition: "0.5s" }}
+            style={{ transition: " 0.5s" }}
             src={logoPhoneBook}
             alt="logoPhoneBook"
             width="30px"
