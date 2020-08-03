@@ -1,0 +1,21 @@
+.box-card-user {
+  background-color: white;
+  box-shadow: 0px 8px 13px -1px rgba(0, 0, 0, 0.05);
+  border-radius: 25px;
+  transition: all 0.3s;
+  border: 0 !important;
+}
+.box-card-user:hover {
+  transform: translateY(-2px) scale(1.02);
+}
+.imgUserContact {
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  border: 1px solid rgb(196, 196, 196);
+}
+.singleCard {
+  color: rgb(173, 173, 173);
+  font-size: 14px;
+  cursor: pointer;
+}
