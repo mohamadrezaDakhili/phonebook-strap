@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Navbar, Row } from "reactstrap";
 import "./NavHorizontal.css";
 import imgUser from "../../../img/user.jpg";
@@ -9,7 +9,6 @@ import SearchView from "../../Search/SearchView";
 export default function NavHorizontal(props) {
   const btnNavHandler = () => {
     const { mainRef } = props;
-    console.log(mainRef);
     props.toggle();
     if (mainRef.current && props.isOpen === false) {
       mainRef.current.style.flex = "1 0 calc(100% - 100px)";
