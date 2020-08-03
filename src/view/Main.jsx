@@ -19,13 +19,13 @@ const Main = (props) => {
         console.log(err);
       });
   }, []);
-  console.log(users);
+  // console.log(users);
 
   return (
     <main id="main-phoneBook" ref={mainRef}>
       <NavHorizontal {...props} mainRef={mainRef} />
-      {/* <MainRouter /> */}
-      <Contact />
+
+      <Contact users={users} />
     </main>
   );
 };
