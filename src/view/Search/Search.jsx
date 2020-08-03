@@ -2,15 +2,17 @@ import React from "react";
 import { Form, Input } from "reactstrap";
 import { RiSearch2Line } from "react-icons/ri";
 
-export default function SearchView() {
+function Search({ handleChange, search }) {
   return (
     <Form>
       <div className="position-relative">
         <Input
           type="text"
-          name="search"
+          name={"search"}
           id="exampleSearch"
           placeholder="Search"
+          onChange={handleChange}
+          value={search}
         />
         <RiSearch2Line
           className="position-absolute"
@@ -20,3 +22,4 @@ export default function SearchView() {
     </Form>
   );
 }
+export default Search;

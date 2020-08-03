@@ -5,6 +5,7 @@ import { FaTwitter } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { Col, Card, CardTitle, CardText, Row } from "reactstrap";
 import "./userCard.css";
+import { Link } from "react-router-dom";
 
 const UserCard = ({ user }) => {
   return (

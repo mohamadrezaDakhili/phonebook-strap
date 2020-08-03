@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import UserCard from "./UserCard/UserCard";
 
-const Contact = ({ users }) => {
+const Contact = ({ filteredUser }) => {
   return (
     <Container dir="ltr">
       <div
@@ -10,7 +10,7 @@ const Contact = ({ users }) => {
         className="mt-3"
       ></div>
       <Row>
-        {users.map((item) => (
+        {filteredUser.map((item) => (
           <UserCard user={item} key={item.id} />
         ))}
       </Row>

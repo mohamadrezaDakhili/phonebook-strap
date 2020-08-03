@@ -4,7 +4,7 @@ import "./NavHorizontal.css";
 import imgUser from "../../../img/user.jpg";
 import imgMenu from "../../../img/menu.svg";
 import { IoMdNotifications } from "react-icons/io";
-import SearchView from "../../Search/SearchView";
+import Search from "../../Search/Search";
 
 export default function NavHorizontal(props) {
   const btnNavHandler = () => {
@@ -28,7 +28,7 @@ export default function NavHorizontal(props) {
       </div>
       <Row className="p-0 m-0">
         <div className="ml-4">
-          <SearchView />
+          <Search handleChange={props.handleChange} search={props.search} />
         </div>
         <img
           onClick={btnNavHandler}
