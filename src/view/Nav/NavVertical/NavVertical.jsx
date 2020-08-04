@@ -13,9 +13,7 @@ import Context from "../../../Context";
 const NavVertical = (props) => {
   const context = useContext(Context);
 
-  useEffect(() => {
-    console.log(context.isOpen);
-  }, [context.isOpen]);
+  useEffect(() => {}, [context.isOpen]);
 
   return (
     <Context.Consumer>
@@ -24,7 +22,7 @@ const NavVertical = (props) => {
           id="navVertical"
           style={{ overflow: `${!value.isOpen ? "hidden" : "visible"}` }}
         >
-          <Row className={`${!value.isOpen ? "test" : ""} h-100 p-0 m-0`}>
+          <Row className={`${!value.isOpen ? "zeroWidth" : ""} h-100 p-0 m-0`}>
             <div className="box-logo" onClick={() => value.push("/")}>
               <img
                 style={{ transition: " 0.5s" }}
@@ -40,16 +38,28 @@ const NavVertical = (props) => {
               >
                 <BsPlusSquareFill className="iconStyle" />
               </Row>
-              <Row className="layoutItem mt-5 justify-content-center align-items-center">
+              <Row
+                className="layoutItem mt-5 justify-content-center align-items-center"
+                onClick={() => value.push("/contact")}
+              >
                 <MdPermContactCalendar className="iconStyle" />
               </Row>
-              <Row className="layoutItem mt-5 justify-content-center align-items-center">
+              <Row
+                className="layoutItem mt-5 justify-content-center align-items-center"
+                onClick={() => value.push("/call")}
+              >
                 <FaPhoneAlt className="iconStyle" />
               </Row>
-              <Row className="layoutItem mt-5 justify-content-center align-items-center">
+              <Row
+                className="layoutItem mt-5 justify-content-center align-items-center"
+                onClick={() => value.push("/message")}
+              >
                 <TiMessages className="iconStyle" />
               </Row>
-              <Row className="layoutItem mt-5 justify-content-center align-items-center">
+              <Row
+                className="layoutItem mt-5 justify-content-center align-items-center"
+                onClick={() => value.push("/exit")}
+              >
                 <FiLogOut className="iconStyle" />
               </Row>
             </div>

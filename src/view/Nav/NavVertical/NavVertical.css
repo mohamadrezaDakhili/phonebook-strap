@@ -2,8 +2,8 @@
   z-index: 20;
   background-color: rgb(59, 26, 138);
   flex-basis: 70px;
-  height: 100vh;
   transition: width 0.5s;
+  height: 100vh;
 }
 .box-logo {
   height: 10%;
@@ -40,7 +40,7 @@
   font-size: 25px;
   transition: 0.5s;
 }
-.test * {
+.zeroWidth * {
   width: 0;
   font-size: 0;
   transition: width 0.5s;

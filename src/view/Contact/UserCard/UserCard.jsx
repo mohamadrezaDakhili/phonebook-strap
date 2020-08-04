@@ -41,7 +41,9 @@ const UserCard = ({ user }) => {
         </Row>
         <Col xs="12">
           <Row className="justify-content-end">
-            <div className="singleCard">more..</div>
+            <div className="singleCard">
+              <Link to={`/user/${user.id}`}>more..</Link>
+            </div>
           </Row>
         </Col>
       </Card>

@@ -1,10 +1,6 @@
 import React from "react";
 import NavHorizontal from "./Nav/NavHorizontal/NavHorizontal";
-import { axiosInstance } from "../api/index";
-import { useState, useEffect } from "react";
-import Contact from "./Contact/Contact";
 import "./main.css";
-import Search from "./Search/Search";
 import Context from "../Context";
 import Router from "../Router";
 
