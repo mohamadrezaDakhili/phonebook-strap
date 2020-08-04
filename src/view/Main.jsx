@@ -5,39 +5,21 @@ import { useState, useEffect } from "react";
 import Contact from "./Contact/Contact";
 import "./main.css";
 import Search from "./Search/Search";
+import Context from "../Context";
+import Router from "../Router";
 
 const Main = (props) => {
   const mainRef = React.useRef(null);
-  const [users, setUser] = useState([]);
-  const [search, setSearch] = useState("");
-
-  useEffect(() => {
-    axiosInstance
-      .get("/users")
-      .then((res) => {
-        setUser(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
-
-  const handleChange = (event) => {
-    const { value } = event.target;
-    setSearch(value);
-  };
-  let filteredUser = users.filter((item) =>
-    item.name.toLowerCase().startsWith(search.toLowerCase())
-  );
   return (
     <main id="main-phoneBook" ref={mainRef}>
-      <NavHorizontal
-        handleChange={handleChange}
-        search={search}
-        {...props}
-        mainRef={mainRef}
-      />
-      <Contact filteredUser={filteredUser} />
+      <Context.Consumer>
+        {(value) => (
+          <>
+            <NavHorizontal {...value} mainRef={mainRef} />
+            <Router />
+          </>
+        )}
+      </Context.Consumer>
     </main>
   );
 };

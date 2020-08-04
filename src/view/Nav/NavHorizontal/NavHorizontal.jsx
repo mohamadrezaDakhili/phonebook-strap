@@ -28,7 +28,7 @@ export default function NavHorizontal(props) {
       </div>
       <Row className="p-0 m-0">
         <div className="ml-4">
-          <Search handleChange={props.handleChange} search={props.search} />
+          <Search handleChange={props.setSearch} search={props.search} />
         </div>
         <img
           onClick={btnNavHandler}

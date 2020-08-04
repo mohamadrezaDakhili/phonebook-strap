@@ -22,7 +22,7 @@ const UserCard = ({ user }) => {
             />
             <Row className="p-0 m-0">
               <div className="d-flex flex-column justify-content-center">
-                <div className="ml-2">{user.name}</div>
+                <div className="ml-2 ">{user.name}</div>
                 <div className="ml-2">{user.phone}</div>
               </div>
             </Row>

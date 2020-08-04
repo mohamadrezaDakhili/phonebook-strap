@@ -11,7 +11,7 @@ function Search({ handleChange, search }) {
           name={"search"}
           id="exampleSearch"
           placeholder="Search"
-          onChange={handleChange}
+          onChange={(e) => handleChange(e.target.value)}
           value={search}
         />
         <RiSearch2Line
